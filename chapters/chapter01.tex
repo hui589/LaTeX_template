@@ -1,0 +1,73 @@
+% chapter01.tex - 第一章：绪论
+% 使用了 \label{} 命令创建标签，便于交叉引用
+% 使用了 itemize 和 enumerate 列表环境
+
+\chapter{chp1 绪论}
+
+\begin{itemize}
+    \item \textbf{医疗诊断}：辅助医生进行疾病筛查和诊断
+    \item \textbf{工业检测}：产品质量自动检测
+\end{itemize}
+
+\begin{enumerate}
+    \item AlexNet（2012年）—— 开创了深度学习在图像识别中的应用
+    \item Transformer（2020年）—— 基于注意力机制的视觉模型
+\end{enumerate}
+
+\section{整体框架}
+本文提出的方法整体框架如图\ref{fig:framework}所示。
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.8\textwidth]{figures/framework.png}
+    \caption{方法整体框架图}
+    \label{fig:framework}
+\end{figure}
+
+\section{算法描述}
+本文提出的算法如算法 \ref{alg:main} 所示。
+
+\begin{algorithm}[htbp]
+    \caption{主要算法}
+    \label{alg:main}
+    \begin{algorithmic}[1]
+        \REQUIRE 输入数据 $X$
+        \ENSURE 输出结果 $Y$
+        \STATE 初始化参数
+        \FOR{$i = 1$ to $N$}
+            \STATE 处理步骤1
+            \STATE 处理步骤2
+        \ENDFOR
+        \RETURN $Y$
+    \end{algorithmic}
+\end{algorithm}
+
+这里是引用1\cite{krizhevsky2012imagenet}
+
+这里是引用2\cite{vaswani2017attention}  
+
+\begin{equation}
+    y = f\left(\sum_{i=1}^{n} w_i x_i + b\right)
+\end{equation}
+其中，$x_i$为输入，$w_i$为权重，$b$为偏置，$f(\cdot)$为激活函数。
+
+\begin{table}[htbp]
+    \centering
+    \caption{常用图像分类算法比较}
+    \label{tab:classification-algorithms}
+    \begin{tabular}{p{0.25\textwidth} p{0.35\textwidth} p{0.3\textwidth}}
+        \toprule
+        \textbf{算法类型} & \textbf{优点} & \textbf{缺点} \\
+        \midrule
+        支持向量机（SVM） & 小样本效果好，泛化能力强 & 大规模数据训练慢 \\
+        随机森林（RF） & 抗过拟合，可处理高维数据 & 模型解释性差 \\
+        卷积神经网络（CNN） & 自动特征提取，识别精度高 & 需要大量训练数据 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{精确率（Precision）和召回率（Recall）}
+\begin{align}
+    \text{Precision} &= \frac{TP}{TP + FP} \label{eq:precision} \\
+    \text{Recall} &= \frac{TP}{TP + FN} \label{eq:recall}
+\end{align}

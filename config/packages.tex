@@ -1,0 +1,43 @@
+% packages.tex - 宏包配置文件
+% 这里集中加载所有需要的LaTeX宏包
+
+% 1. 字体和编码支持
+\usepackage[UTF8]{ctex}           % 中文支持，自动处理字体和标点
+\usepackage{fontspec}             % 字体设置（XeLaTeX/LuaLaTeX）
+\usepackage{amsmath, amssymb}     % 数学公式和符号
+\usepackage{bm}                   % 数学粗体
+
+% 2. 页面布局和格式
+\usepackage{geometry}             % 页面边距设置
+\usepackage{fancyhdr}             % 页眉页脚设置
+\usepackage{titlesec}             % 章节标题格式
+\usepackage{titletoc}             % 目录格式
+
+
+% 3. 图形和表格
+\usepackage{graphicx}             % 插入图片
+\usepackage{subcaption}           % 子图支持
+\usepackage{booktabs}             % 专业表格线
+\usepackage{longtable}            % 跨页表格
+\usepackage{multirow}             % 表格多行合并
+\usepackage{array}                % 表格列格式
+\usepackage{caption}              % 图表标题格式
+
+% 4. 参考文献和引用
+\usepackage[sort&compress]{natbib} % 参考文献管理
+\usepackage{hyperref}             % 超链接和书签
+\usepackage{cleveref}             % 智能引用
+
+% 5. 算法和代码
+\usepackage{algorithm}            % 算法环境
+\usepackage{algorithmic}          % 算法伪代码
+\usepackage{listings}             % 代码列表
+\usepackage{xcolor}               % 颜色支持（用于代码高亮）
+
+% 6. 其他工具
+\usepackage{enumitem}             % 列表环境定制
+\usepackage{float}                % 浮动体控制
+\usepackage{setspace}             % 行间距设置
+\usepackage{indentfirst}          % 首行缩进
+\usepackage{url}                  % URL排版
+\usepackage{siunitx}              % 单位格式化

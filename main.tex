@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper, oneside]{book}
+% 文档类声明：使用book类（适合书籍、论文）
+% 选项说明：
+%   12pt - 正文使用12磅字号
+%   a4paper - 纸张大小为A4
+%   oneside - 单面打印（双面打印用twoside）
+
+% 加载配置
+\input{config/packages}      % 加载宏包配置文件
+\input{config/settings}      % 加载格式设置文件
+% \input{config/commands}      % 加载自定义命令文件
+
+\begin{document}
+% 文档内容开始
+
+% ========== 前页部分 ==========
+\frontmatter
+% book类的特殊命令：表示前页部分（封面、摘要、目录等）
+% 页码用罗马数字（i, ii, iii...）
+% 中文封面
+\include{frontmatter/cover-zh}  % 插入中文封面文件
+% 英文封面
+\include{frontmatter/cover-en}  % 插入英文封面文件
+% 摘要页
+\include{frontmatter/abstract-zh}  % 插入中文摘要
+\include{frontmatter/abstract-en}  % 插入英文摘要
+% 目录
+\tableofcontents    % 生成目录
+% \listoffigures      % 生成图目录（可选）
+% \listoftables       % 生成表目录（可选）
+
+% ========== 正文部分 ==========
+% \frontmatter
+\mainmatter
+% book类的特殊命令：表示正文部分开始
+% 页码用阿拉伯数字（1, 2, 3...），从1开始重新计数
+% 各章节
+\include{chapters/chapter01}  % 第1章
+\include{chapters/chapter02}  % 第2章
+\include{chapters/chapter03}  % 第3章
+% 可以继续添加更多章节...
+
+% ========== 后页部分 ==========
+\backmatter
+% book类的特殊命令：表示附录、参考文献等后页部分
+% 页码继续使用阿拉伯数字
+
+% 参考文献
+% \bibliographystyle{plain}      % 设置参考文献样式
+% \bibliography{backmatter/refs} % 指定参考文献数据库文件
+% ------------- 更改为 -----------
+% 注意：gbt7714-numerical 是中国国家标准参考文献样式，如果需要使用其他样式，可以改为：
+% plain：简单样式
+% ieeetr：IEEE样式
+% acm：ACM样式
+\bibliographystyle{plain}
+\bibliography{backmatter/references}
+
+% 附录
+\appendix
+\include{backmatter/appendixA}
+\include{backmatter/appendixB}
+
+% 致谢
+\include{backmatter/acknowledgements}
+
+\end{document}
+
+% 文档结束
+
